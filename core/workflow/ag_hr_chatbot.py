@@ -2,15 +2,17 @@ from langchain_core.messages import HumanMessage, AIMessage
 from core.pydantic_classes.workflow_clases import EvaluationResponse
 from core.prompts.workflow_prompts import eval_prompt
 from dotenv import load_dotenv
-import os
 
-from langchain_openai import ChatOpenAI
+from langchain_openai import AzureChatOpenAI
 
 load_dotenv()
 
 
-api_key: str | None = os.environ.get("OPENAI_API_KEY2")
-llm = ChatOpenAI(model="gpt-4o-mini", api_key=api_key)
+llm = AzureChatOpenAI(
+    azure_deployment="gpt-4o-mini",
+    api_version="2023-03-15-preview",
+    temperature=0,
+)
 structured_llm = llm.with_structured_output(EvaluationResponse)
 
 chain = eval_prompt | structured_llm
