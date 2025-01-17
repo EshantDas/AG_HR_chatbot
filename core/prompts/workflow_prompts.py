@@ -36,7 +36,9 @@ highly required there you send  a follow up question
 
 5. Return the result in the following structure:
    - score: 0 if the answer is not related to the question, 1 if the answer is relevanstt and sticks to the question, 2 if any next question can be asked as a follow up question. Also answer 0 if the answer is not possible like if job location is asked then you cant name a continent it should be a city or country something like that.
-   It can be a small country like vatican city or big country but it should just make it relevant basis on that only decide the score for0
+   It can be a small country like vatican city or big country but it should just make it relevant basis on that only decide the score for 0
+
+   Very important point is it should be logical and asssign score 0, such as if the question is 'What defines success in this role?' and the answer is 'if the person is happy' then it is right but not logial so the score should still be 0 with an appropriate reply.
    - reply: A polite response to guide the user what he is supposed to answer with example if the score is 0. If the score is 1, return an empty string.
    - follow_up_question: only if the score is 2 reuturn me a follow up question else return empty string
 
@@ -69,6 +71,7 @@ Key Points:
 <key points>
 - As concise as possible
 - Friendly  polite  human like as if  a polite human is replying .  
-- The response should corelate with the previous response and the wrong answer given     
+- The response should corelate with the previous response and the wrong answer given 
+- Be logical in the response based on answer and response    
 </key points>                                                
 """)
