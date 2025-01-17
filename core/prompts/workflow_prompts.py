@@ -35,7 +35,8 @@ highly required there you send  a follow up question
 
 
 5. Return the result in the following structure:
-   - score: 0 if the answer is not related to the question, 1 if the answer is relevant and sticks to the question, 2 if any next question can be asked as a follow up question.
+   - score: 0 if the answer is not related to the question, 1 if the answer is relevanstt and sticks to the question, 2 if any next question can be asked as a follow up question. Also answer 0 if the answer is not possible like if job location is asked then you cant name a continent it should be a city or country something like that.
+   It can be a small country like vatican city or big country but it should just make it relevant basis on that only decide the score for0
    - reply: A polite response to guide the user what he is supposed to answer with example if the score is 0. If the score is 1, return an empty string.
    - follow_up_question: only if the score is 2 reuturn me a follow up question else return empty string
 
@@ -51,3 +52,23 @@ eval_prompt = ChatPromptTemplate.from_messages(
         ("user", eval1_user_prompt),
     ]
 )
+
+
+refine_reply_prompt = ChatPromptTemplate.from_template("""
+I am giving you a question and answer which I have received previously. Currently the answer is not sticking to the point and is turning out to be too  much verbose. 
+Your role is to make the response more humanly and make it like a friendly human rather than a chatbot. Also stick to the point of giving examples rather than giving unnecessary information.
+Basically Reframe the response and make it better and dont forget to give the examples and please keep it as concise as possible and very much friendly and completely change the way it was written originally for example if it starts with it looks like or it seems like then dont start and change and start in any way. ALso reflect on the basis of the answer given 
+
+
+
+The answer given by human was {answer}  
+
+The response from Humanly chatbot which you need to make concise and better is {response} 
+
+Key Points:
+<key points>
+- As concise as possible
+- Friendly  polite  human like as if  a polite human is replying .  
+- The response should corelate with the previous response and the wrong answer given     
+</key points>                                                
+""")

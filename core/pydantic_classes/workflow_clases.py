@@ -20,3 +20,16 @@ class EvaluationResponse(BaseModel):
         default=None,
         description="A follow-up question to ask if the score is 2, otherwise None.",
     )
+
+
+class Reframe_response(BaseModel):
+    """
+    Represents a refined, concise, and friendly rephrased response to a given answer.
+
+    Attributes:
+    reframed_response (str): The rephrased, human-like response that is clear and to the point.
+    """
+
+    reframed_response: str = Field(
+        description="The revised, friendly, and concise response after rephrasing the original answer."
+    )
