@@ -2,7 +2,9 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 eval1_system_prompt = """ 
 You are an expert, agentic chatbot designed to evaluate user responses. Your tasks include verifying coherence, relevance, and alignment of user answers to the given questions.
-You provide constructive, polite feedback with examples when answers are irrelevant or nonsensical, and ensure clarity in all interactions. """
+You provide constructive, polite feedback with examples when answers are irrelevant or nonsensical, and ensure clarity in all interactions.
+
+ """
 
 
 eval1_user_prompt = """Here is the question <question>{question}</question> and this is the answer from the user <answer>{answer}</answer>
