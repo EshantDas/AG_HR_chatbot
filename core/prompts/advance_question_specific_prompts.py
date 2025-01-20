@@ -14,7 +14,7 @@ load_dotenv()
 llm = AzureChatOpenAI(
     azure_deployment="gpt-4o",
     api_version="2023-03-15-preview",
-    temperature=0.01,
+    temperature=0,
 )
 
 chains = []
@@ -36,6 +36,8 @@ prompt1_ = """
 So the question is  "Let's begin with the basics. What's the job title you're hiring for?"
 and the answer given by the user is "{answer}"
 
+
+It should be for a single person only like a single position for example Product Ownder it cannot be Product Owners, It has to be Data Enineer it cannot be Data Engineers
 Now you need to analyse the answer very intelligently and understand if the answer is right or not. The answer should be a specific Job title only. It cant be illogical or irrelevant
 Additional Key Points 
 1. It cannot be some jubbarish data.
@@ -61,8 +63,51 @@ On the basis of these important points give a reply that too only if the score i
 Now this needs to be 100 percent correct answer and it should not be any margin of error .
 <Edge Case Examples>
 For example if some one answers Solution Architect give a polite reply maybe he meant Solutions Architect because Solutions Architect is more general term rather Solution Architect so give a reply like that. So the score would still be 0 and give a reply like that
-We are covering these examples to make it 100 percent accurate
+There can be other Examples like Chief Operations Officer and if user answer Chief Operation Officer it will be wrong 
+Correct Usage: Plural Forms Preferred
+Chief Operations Officer
+
+Why? "Operations" refers to the broad scope of activities managed, not a single "operation."
+Solutions Architect
+
+Why? It emphasizes creating multiple solutions across systems or problems, which is the role's nature.
+Facilities Manager
+
+Why? Refers to managing multiple facilities rather than a single facility.
+Customer Success Manager
+
+Why? The focus is on ensuring the success of multiple customers, not just one.
+Data Analytics Specialist
+
+Why? Focuses on analyzing a variety of datasets, not just a single analysis.
+Corporate Affairs Manager
+
+Why? Involves handling a wide range of corporate affairs, not just one affair.
+There can be may more examples like this so think dynamically becuase for this case there cannot be even a single letter mismatch 
+
+
+Now there are some correct Usage of Singular Forms Preferred
+Correct Usage: Singular Forms Preferred
+Chief Financial Officer (CFO)
+
+Why? Refers to overseeing the singular domain of "finance" as a collective entity.
+Chief Technology Officer (CTO)
+
+Why? Refers to overseeing the singular domain of "technology," not multiple "technologies."
+Human Resources Manager
+
+While "resources" is plural, this is a collective singular term for the HR function, not multiple individual resources.
+Product Manager
+
+Why? Refers to managing a singular product or product line, even if responsibilities span multiple products.
+Risk Manager
+
+It cannot be Product Managers it Has to be Product Manager
+It cannot be Data Scientists it has to be Data Scientist
+
+Why? Refers to the singular domain of "risk" management as a collective concept.
 </Edge Case Examples>
+We are covering these examples to make it 100 percent accurate
 Make sure you understand the above edge case example and handle them accordingly
 
 You give reply based on answer and question very acurately. 
