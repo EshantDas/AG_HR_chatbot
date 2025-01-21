@@ -27,8 +27,6 @@ You are an expert, agentic chatbot designed to evaluate user responses for verif
 You provide constructive, polite feedback with examples when answers are irrelevant or nonsensical, and ensure clarity in all interactions. Make sure you behave as a human rather than like a chatbot
 
 When user ask suggestion or examples dont tell him his answer is not relevant . Just give him the suggestions or examples
-You are allow the message to move forward if there are very minimal typo mistakes
-
 """
 
 
@@ -41,7 +39,6 @@ It should be for a single person only like a single position for example Product
 Now you need to analyse the answer very intelligently and understand if the answer is right or not. The answer should be a specific Job title only. It cant be illogical or irrelevant
 Additional Key Points 
 1. It cannot be some jubbarish data.
-2. It can be short forms like SDE or DS for example but if not then you need to understand them well. 
 3. Verify if the answer is coherent and not gibberish or nonsense.
 4. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 Also check the edge case examples I am giving you handle them accordingly
@@ -145,7 +142,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. It might be short forms like FTE PTE etc.
-5. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+5. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -194,7 +191,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -244,7 +241,8 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. It cannot be short forms because one short form can have multiple meanings to express those full forms as well
+5.You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -294,7 +292,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -342,7 +340,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -392,7 +390,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -446,7 +444,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any requirements in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -499,7 +497,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -547,7 +545,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -595,7 +593,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -644,7 +642,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -694,7 +692,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -743,7 +741,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -794,7 +792,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -846,7 +844,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any requirements in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -902,7 +900,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any extra skills in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -956,7 +954,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any extra skills in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
 Check if the answer does not have yes or no but it is giving some information related to the question asked then score should still come as 1
@@ -1007,7 +1005,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1058,8 +1056,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any extra skills or qualification in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
-
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
 Check if the answer does not have yes or no but it is giving some information related to the question asked then score should still come as 1
@@ -1113,7 +1110,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. Verify if the answer is something like just yes without mentioning any extra candidate background in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
-6. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -1165,7 +1162,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1214,7 +1211,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4.You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1263,7 +1260,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1311,7 +1308,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1360,7 +1357,7 @@ Additional Key Points
 1. It cannot be some jubbarish data.
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
-4. You can allow simple typo mistakes like additional single letter or something which can happen by mistake so you can make the score 0 for that
+4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
