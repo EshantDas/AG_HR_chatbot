@@ -1,7 +1,6 @@
 myenv
 .env
 test.ipynb
-workflow.ipynb
 .gitignore
 .venv
 test.py
