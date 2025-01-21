@@ -25,7 +25,7 @@ llm_reply = llm.with_structured_output(EvaluationResponseOnly)
 eval_system_prompt = """ 
 You are an expert, agentic chatbot designed to evaluate user responses for verifying questions related to what to put in Job Descriptions related questions. Your tasks include verifying coherence, relevance, and alignment of user answers to the given questions.
 You provide constructive, polite feedback with examples when answers are irrelevant or nonsensical, and ensure clarity in all interactions. Make sure you behave as a human rather than like a chatbot
-
+Please move forward with simple spelling mistakes and dont be too strict on the spelling and just give score 1 if it user means something from the question but there is spelling mistakes.
 When user ask suggestion or examples dont tell him his answer is not relevant . Just give him the suggestions or examples
 """
 
@@ -142,7 +142,8 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. It might be short forms like FTE PTE etc.
-5. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+5. You can allow any kind of typo mistakes or spelling mistakes dont be too strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -192,7 +193,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -243,7 +244,7 @@ Additional Key Points
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. It cannot be short forms because one short form can have multiple meanings to express those full forms as well
 5.You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -293,7 +294,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -341,7 +342,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -391,7 +392,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -445,7 +446,7 @@ Additional Key Points
 4. Verify if the answer is something like just yes without mentioning any requirements in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
 6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
 Check if the answer does not have yes or no but it is giving some information related to the question asked then score should still come as 1
@@ -498,7 +499,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -546,7 +547,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -594,7 +595,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -643,7 +644,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -693,7 +694,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -742,7 +743,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -793,7 +794,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -845,6 +846,7 @@ Additional Key Points
 4. Verify if the answer is something like just yes without mentioning any requirements in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
 6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -901,6 +903,7 @@ Additional Key Points
 4. Verify if the answer is something like just yes without mentioning any extra skills in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
 6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -961,7 +964,7 @@ Check if the answer does not have yes or no but it is giving some information re
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
 Follow_up: If the answer is yes to this specific questions then a follow up questions should be asked something like "So what are the additional certifications you need?" . On the basis of this refine something of your own and give me back a follow up question only in the case where someone is answering yes to this quesiton. In case answer is no or nah then score will be 0 and follow up can be Null
 The score should be 1 if user answers the technical skills or soft skills needed even without saying yes
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 Important Points while replying:
 - Carefully understand what went wrong on the answer based on the question which is  and check if the answer is not logical or jubbarish not sensible logically. Even if it is relevant and it doesn't seem logically right still mark the score 0
 - Reflect in accordance to that and give a reply memntioning what went wrong and what he can answer to get it right basically give 2 or 3 examples
@@ -1006,7 +1009,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
-
+Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
@@ -1063,6 +1066,7 @@ Check if the answer does not have yes or no but it is giving some information re
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
 Follow_up: If the answer is yes to this specific questions then a follow up questions should be asked something like "So what are the additional certifications you need?" . On the basis of this refine something of your own and give me back a follow up question only in the case where someone is answering yes to this quesiton. In case answer is no or nah then score will be 0 and follow up can be Null
 The score should be 1 if user answers the  additional qualifications or skills needed even without saying yes
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 Important Points while replying:
 - Carefully understand what went wrong on the answer based on the question which is  and check if the answer is not logical or jubbarish not sensible logically. Even if it is relevant and it doesn't seem logically right still mark the score 0
@@ -1111,6 +1115,7 @@ Additional Key Points
 4. Verify if the answer is something like just yes without mentioning any extra candidate background in that case we need to ask back some follow up questions so that the user can type back the requiements
 5. If it has yes along with the extra info then score should be 1 only but if its only yes then 2
 6. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right, 2 if a follow up question is supposed to be asked
@@ -1163,6 +1168,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1212,6 +1218,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4.You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1261,6 +1268,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1309,6 +1317,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
@@ -1358,6 +1367,7 @@ Additional Key Points
 2. Verify if the answer is coherent and not gibberish or nonsense.
 3. Ensure the answer is relevant to the question and not completely invalid or unrelated.
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
+Please allow to move forward for simple spelling mistakes and dont be very strict
 
 On the basis of this you need to return me back 2 things
 Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
