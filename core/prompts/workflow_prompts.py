@@ -47,6 +47,7 @@ highly required there you send  a follow up question
 Go though the chat history and make sure you dont ask the same follow up question again and again . Change it if required
 
 Finally just follow the structure and no additional extra info
+If user asks some suggestions then be matured enough to provide them suggestions and make score 0 because you need to provide examples or suggestions
 """
 
 eval_prompt = ChatPromptTemplate.from_messages(

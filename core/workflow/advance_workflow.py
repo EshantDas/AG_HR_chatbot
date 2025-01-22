@@ -15,10 +15,10 @@ async def return_reponse(question, answer, chat_history, chat_summary):
     chain = await get_chain_for_question(question)
     if chain:
         chat_history_first = chat_history[:3]
+
         response = await chain.ainvoke(
             {"chat_history": chat_history_first, "question": question, "answer": answer}
         )
-
         chat_history.append(AIMessage(content=question))
         chat_history.append(HumanMessage(content=answer))
         chat_history.append(AIMessage(content=response.reply))
