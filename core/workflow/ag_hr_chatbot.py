@@ -12,12 +12,14 @@ llm = AzureChatOpenAI(
     azure_deployment="gpt-4o-mini",
     api_version="2023-03-15-preview",
     temperature=0,
+    seed=42,
 )
 
 llm_advance = AzureChatOpenAI(
     azure_deployment="gpt-4o",
     api_version="2023-03-15-preview",
     temperature=0.5,
+    seed=42,
 )
 
 
