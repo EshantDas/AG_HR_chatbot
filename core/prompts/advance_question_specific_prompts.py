@@ -15,6 +15,7 @@ llm = AzureChatOpenAI(
     azure_deployment="gpt-4o",
     api_version="2023-03-15-preview",
     temperature=0,
+    seed=42,
 )
 
 chains = []
@@ -797,8 +798,13 @@ Additional Key Points
 4. You can allow any kind of typo mistakes or spelling mistakes dont be strict on that at all and clear to the next question with score 1
 Please allow to move forward for simple spelling mistakes and dont be very strict
 On the basis of this you need to return me back 2 things
-Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right
+Score: 0 If the answer is not related to the question or not logical enough, 1 if the answer is relevant and sticks to the question and is also logically right. If the years of experience is below 60 then dont be too logical and just give score 1
 Reply: This should be an empty string if score is 1 since its relevance, Now if the score is 0 then you need to reply very carefully and very logically.
+
+IF someone is giving a range then he or she needs to put either 
+1. hyphen for example (2-4) or 2. "to" for example (1 to 3) . Spaces aren't allowed and directly make the score 0
+
+If someone is giving years of experience more than 60 then directly make the score 0 becuase that is not possible at all so it has to be less than 60 years
 
 Important Points while replying:
 - Carefully understand what went wrong on the answer based on the question and check if the answer is not logical or jubbarish or not sensible logically . Even if it is relevant and it doesn't seem logically right still mark the score 0
@@ -820,6 +826,8 @@ Also make sure when user is asking for suggestions then you dont write  "It seem
 It should directly and clearly reply here are some suggestions or examples in the reply. 
 If it says thank you then say welcome and then ask the question back
 Make sure the reply is concise and not verbose
+
+Make sure if the years of experience is less than 60 then you dont need to give a score 0 you can give 1
 """
 
 prompt15 = ChatPromptTemplate.from_messages(
@@ -1412,3 +1420,8 @@ chains.append(prompt26 | llm_reply)
 question_chain_pair = {}
 for i in range(len(questions_list)):
     question_chain_pair[questions_list[i]] = chains[i]
+
+
+question_chain_pair[
+    "What's the minimum years of experience required for this role?"
+] = prompt15 | llm_reply
